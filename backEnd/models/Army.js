@@ -42,6 +42,7 @@ const Army = db.define('army', {
   minPercentageHorseArchers,
   minNumHorseArchers,
   miscRequirements,
+  timePeriod,
 });
 
 Army.hasMany(Unit);
