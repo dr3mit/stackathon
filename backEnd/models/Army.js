@@ -45,7 +45,4 @@ const Army = db.define('army', {
   timePeriod,
 });
 
-Army.hasMany(Unit);
-Unit.belongsTo(Army);
-
 module.exports = Army;
