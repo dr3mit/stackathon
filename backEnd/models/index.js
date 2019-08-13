@@ -9,6 +9,6 @@ Unit.belongsTo(Army);
 Army.hasMany(Division);
 Divison.belongsTo(Army);
 Army.hasMany(Divison);
-Divison.belongsTo(Arm);
+Divison.belongsTo(Army);
 
 module.exports = { db, Army, Unit, Division, data };
