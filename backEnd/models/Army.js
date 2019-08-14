@@ -3,6 +3,11 @@ const Sequelize = require('sequelize');
 const data = require('../../data');
 
 const Army = db.define('army', {
+  id: {
+    type: Sequelize.UUID,
+    defualtValue: Sequelize.UUIDV4,
+    primaryKey: true,
+  },
   name: {
     type: Sequelize.STRING,
     defualtValue: `FORCE`,
@@ -116,11 +121,31 @@ const Army = db.define('army', {
     type: Sequelize.INTEGER,
     defualtValue: 0 / 1,
   },
+  minNumPikes: {
+    type: Sequelize.INTEGER,
+    defualtValue: 0,
+  },
   minPercentagePikes: {
     type: Sequelize.DECIMAL,
     defualtValue: 0.0,
   },
   minNumPikes: {
+    type: Sequelize.INTEGER,
+    defualtValue: 0,
+  },
+  maxNumHoplites: {
+    type: Sequelize.INTEGER,
+    defualtValue: 0 / 1,
+  },
+  minPercentageHoplites: {
+    type: Sequelize.DECIMAL,
+    defualtValue: 0.0,
+  },
+  minNumHoplites: {
+    type: Sequelize.INTEGER,
+    defualtValue: 0,
+  },
+  minNumHoplites: {
     type: Sequelize.INTEGER,
     defualtValue: 0,
   },
