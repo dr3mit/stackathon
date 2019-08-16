@@ -22,6 +22,7 @@ const Unit = db.define('unit', {
   numOfModels: {
     type: Sequelize.INTEGER,
     defualtValue: 16,
+    s,
   },
   speed: {
     type: Sequelize.INTEGER,
@@ -77,7 +78,7 @@ const Unit = db.define('unit', {
     defualtValue: data.specialRules,
   },
   specialRules: {
-    type: Sequelize.ENUM(this.possibleSpecialRules),
+    type: Sequelize.ENUM(data.specialRules),
   },
 });
 

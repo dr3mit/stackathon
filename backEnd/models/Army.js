@@ -12,26 +12,13 @@ const Army = db.define('army', {
     type: Sequelize.STRING,
     defualtValue: `FORCE`,
   },
-  maxCost: {
-    type: Sequelize.INTEGER,
-    defualtValue: 0 / 1,
-  },
   faction: {
     type: Sequelize.ENUM([data.factions]),
     allowNull: false,
   },
-  detachments: {
+  possibleUnits: {
     type: Sequelize.ARRAY,
-  },
-  curCost: {
-    type: Sequelize.INTEGER,
-    defualtValue: 0,
-  },
-  units: {
-    type: Sequelize.ARRAY,
-  },
-  curUnits: {
-    type: Sequelize.ARRAY,
+    defualtValue: [],
   },
   minUnitsPerDetachment: {
     type: Sequelize.INTEGER,

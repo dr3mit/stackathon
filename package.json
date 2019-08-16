@@ -4,7 +4,11 @@
   "description": "making an app",
   "main": "index.js",
   "scripts": {
-    "test": "npm jest"
+    "test": "npm jest",
+    "test:dev": " ",
+    "start": " ",
+    "start:dev": " ",
+    "seed": " "
   },
   "keywords": [
     "stackathon"

@@ -11,10 +11,10 @@ const Division = db.define('division', {
     type: Sequelize.INTEGER,
     defualtValue: 1,
   },
-  units: {
-    type: Sequelize.ARRAY,
-    defualtValue: [],
-  },
+  // units: {
+  //   type: Sequelize.ARRAY,
+  //   defualtValue: [],
+  // },
   curCost: {
     type: Sequelize.INTEGER,
     defualtValue: 0,
