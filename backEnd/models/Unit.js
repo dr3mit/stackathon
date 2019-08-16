@@ -29,7 +29,7 @@ const Unit = db.define('unit', {
     defualtValue: 6,
   },
   type: {
-    type: Sequelize.ENUM([HEAVY_INFANTRY]),
+    type: Sequelize.ENUM(Object.values(data.types)),
   },
   weapons: {
     type: Sequelize.ENUM([data.constants.weapons]),

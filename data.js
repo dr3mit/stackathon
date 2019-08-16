@@ -2,9 +2,23 @@ const constants = require('./constants');
 const factions = {
   IR: { name: 'Imperial Rome', timePeriod: '0 AD - 200 AD' },
   MR: { name: 'Marian Rome', timePeriod: '50 BC - 0 BC' },
+  EG: { name: 'Early Germans', timePeriod: '0 AD - 300 AD' },
 };
-const types = [{ name }];
-const specialRules = [{ name, effect }];
-const timePeriod = [{ time }];
+const types = {
+  heavyInfantry: 'Heavy Infantry',
+  legionaries: 'Legionaries',
+  mediumInfantry: 'Medium Infantry',
+  lightInfantry: 'Light Infantry',
+  warband: 'Warband',
+  cavalry: 'Cavalry',
+  chariots: 'Chariots',
+};
+const specialRules = [
+  {
+    testudo: '+2 save from shooting attacks.',
+    elite: 'Re-roll 1 to hit roll.',
+  },
+];
+const timePeriod = [{ name: 'Pax Romana', time: '20 BC - 200 AD' }];
 
 module.exports = { factions, types, specialRules, timePeriod, constants };

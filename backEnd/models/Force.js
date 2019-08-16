@@ -25,9 +25,9 @@ const Force = db.define('army', {
       Object.values(data.factions).map(faction => faction.name),
     ]),
     allowNull: false,
-  },
-  detachments: {
-    type: Sequelize.ARRAY,
+    validate: {
+      notEmpty: true,
+    },
   },
 });
 

@@ -61,8 +61,8 @@ units['unit1'] = Unit.create({
   .catch(e => console.log(e));
 
 units['unit2'] = Unit.create({
-  name: 'Legionaries',
-  type: 'Legionaries',
+  name: 'Warband',
+  type: data.types.legionaries,
   upgrades: 'Veteran',
   cost: 32,
   curCost: 32,
@@ -77,8 +77,8 @@ units['unit2'] = Unit.create({
   .catch(e => console.log(e));
 
 units['unit3'] = Unit.create({
-  name: 'Legionaries',
-  type: 'Legionaries',
+  name: 'Warband',
+  type: data.types.warband,
   upgrades: 'Veteran',
   cost: 32,
   curCost: 32,
@@ -108,18 +108,24 @@ armies[data.factions.EG.name]
   .catch(e => console.log(e));
 
 armies[data.factions.EG.name]
-  .setUnit(units['uni3'])
+  .setUnit(units['unit3'])
   .then()
   .catch(e => console.log(e));
 
 //Forces
 let forces = {};
 
-forces['force0'] = Force.create({})
+forces['force0'] = Force.create({
+  maxCost: 300,
+  faction: data.factions.IR.name,
+})
   .then()
   .catch(e => console.log(e));
 
-forces['force1'] = Force.create({})
+forces['force1'] = Force.create({
+  maxCost: 300,
+  faction: data.factions.EG.name,
+})
   .then()
   .catch(e => console.log(e));
 
@@ -158,3 +164,35 @@ divisons['division1']
   .setUnit(units['unit3'])
   .then()
   .catch(e => console.log(e));
+
+forces['force0']
+  .setDivison(divisons['divison0'])
+  .then()
+  .cathc(e => console.log(e));
+
+forces['force1']
+  .setDivison(divisons['divison1'])
+  .then()
+  .cathc(e => console.log(e));
+
+forces['force0']
+  .setUnit(units['unit0'])
+  .then()
+  .catch(e => console.log(e));
+
+forces['force0']
+  .setUnit(units['unit1'])
+  .then()
+  .catch(e => console.log(e));
+
+forces['force1']
+  .setUnit(units['unit2'])
+  .then()
+  .catch(e => console.log(e));
+
+forces['force1']
+  .setUnit(units['unit3'])
+  .then()
+  .catch(e => console.log(e));
+
+console.log('Seeding complete');
