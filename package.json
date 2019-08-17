@@ -6,8 +6,8 @@
   "scripts": {
     "test": "npm jest",
     "test:dev": " ",
-    "start": " ",
-    "start:dev": " ",
+    "start": "node backEnd/index.js",
+    "start:dev": "npx webpack frontEnd/index.js -o ./public/bundle.js --watch & npx nodemon ./backEnd/index.js -q",
     "seed": " "
   },
   "keywords": [
@@ -16,6 +16,7 @@
   "author": "Drew Mitchell",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.19.0",
     "babel-cli": "^6.26.0",
     "express": "^4.17.1",
     "pg": "^7.12.1",
@@ -23,6 +24,7 @@
     "react-redux": "^7.1.0",
     "redux": "^4.0.4",
     "sequelize": "^5.13.1",
+    "volleyball": "^1.5.1",
     "webpack": "^4.39.2",
     "webpack-cli": "^3.3.6"
   }

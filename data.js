@@ -12,6 +12,8 @@ const types = {
   warband: 'Warband',
   cavalry: 'Cavalry',
   chariots: 'Chariots',
+  skirmishers: 'Skirimishers',
+  artillery: 'Artillery',
 };
 // const specialRules = [
 //   {

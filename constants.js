@@ -34,6 +34,7 @@ const constants = {
     LONG_SPEAR: 'LONG_SPEAR',
     SLING: 'SLING',
     JAVELIN: 'JAVELIN',
+    ARTILLERY: 'ARTILLERY',
   },
   GUEST: 'GUEST',
 };

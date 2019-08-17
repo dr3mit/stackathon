@@ -2,7 +2,7 @@ const db = require('../db');
 const Sequelize = require('sequelize');
 const data = require('../../data');
 
-const Force = db.define('faction', {
+const Force = db.define('force', {
   id: {
     type: Sequelize.UUID,
     defaultValue: Sequelize.UUIDV4,

@@ -5,12 +5,12 @@ const data = require('../../data');
 const User = db.define('User', {
   id: {
     type: Sequelize.UUID,
-    defualtValue: Sequelize.UUIDV4,
+    defaultValue: Sequelize.UUIDV4,
     primaryKey: true,
   },
   userName: {
     type: Sequelize.STRING,
-    defualtValue: data.constants.GUEST,
+    defaultValue: data.constants.GUEST,
     allowNull: false,
     validate: {
       notEmpty: true,
@@ -18,11 +18,11 @@ const User = db.define('User', {
   },
   password: {
     type: Sequelize.STRING,
-    defualtValue: 'pass',
+    defaultValue: 'pass',
   },
   sid: {
     type: Sequelize.STRING,
-    defualtValue: '0',
+    defaultValue: '0',
   },
 });
 

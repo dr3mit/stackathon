@@ -3,13 +3,22 @@ const db = require('../db');
 const Sequelize = require('sequelize');
 
 const Upgrade = db.define('upgrade', {
+  id: {
+    type: Sequelize.UUID,
+    defaultValue: Sequelize.UUIDV4,
+    primaryKey: true,
+  },
   name: {
     type: Sequelize.STRING,
-    defualtValue: 'Upgrade',
+    defaultValue: 'Upgrade',
   },
   effect: {
     type: Sequelize.STRING,
-    defualtValue: 'Effect',
+    defaultValue: 'Effect',
+  },
+  cost: {
+    type: Sequelize.INTEGER,
+    defaultValue: 0,
   },
 });
 

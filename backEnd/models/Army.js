@@ -150,6 +150,10 @@ const Army = db.define('army', {
     type: Sequelize.INTEGER,
     defaultValue: 0,
   },
+  minPercentageWarband: {
+    type: Sequelize.DECIMAL,
+    defaultValue: 0.0,
+  },
   timePeriod: {
     type: Sequelize.ENUM(
       Object.values(data.timePeriod).map(period => period.time)

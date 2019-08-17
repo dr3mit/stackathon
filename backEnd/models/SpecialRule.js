@@ -3,13 +3,18 @@ const db = require('../db');
 const Sequelize = require('sequelize');
 
 const SpecialRule = db.define('specialRule', {
+  id: {
+    type: Sequelize.UUID,
+    defaultValue: Sequelize.UUIDV4,
+    primaryKey: true,
+  },
   name: {
     type: Sequelize.STRING,
-    defualtValue: 'Special Rule',
+    defaultValue: 'Special Rule',
   },
   rule: {
     type: Sequelize.STRING,
-    defualtValue: 'Rule',
+    defaultValue: 'Rule',
   },
 });
 
