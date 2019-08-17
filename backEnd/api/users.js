@@ -1,26 +1,28 @@
 const router = require('express').Router();
 const { User } = require('../models/index');
 
-router.get('/users', (req, res) => {
+router.get('/', (req, res) => {
   User.findAll()
     .then(forces => res.json(forces))
     .catch(e => console.log(e));
 });
 
-router.get('/users/:id', (req, res) => {
+router.get('/:id', (req, res) => {
   User.findByPk(req.params.id)
     .then(user => res.json(user))
     .catch(e => console.log(e));
 });
 
-router.post('/users/', (req, res) => {
+router.post('/', (req, res) => {
   User.create({})
     .then(() => {})
     .catch(e => console.log(e));
 });
 
-router.put('/users/:id', (req, res) => {
+router.put('/:id', (req, res) => {
   User.findByPk(req.params.id)
     .then(() => {})
     .catch(e => console.log(e));
 });
+
+module.exports = router;

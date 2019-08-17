@@ -21,6 +21,9 @@ const types = {
 //     elite: 'Re-roll 1 to hit roll.',
 //   },
 // ];
-const timePeriod = { 'Pax Romana': { time: '20 BC - 200 AD' } };
+const timePeriod = {
+  PaxRomana: { time: '20 BC - 200 AD' },
+  Germany: { time: '200 BC - 200 AD' },
+};
 
 module.exports = { factions, types, timePeriod, constants };

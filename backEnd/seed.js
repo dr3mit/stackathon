@@ -26,6 +26,7 @@ async function init() {
       faction: data.factions.EG.name,
       minPercentageInfantry: 0.75,
       minPercentageWarband: 0.5,
+      timePeriod: data.timePeriod['Germany'].time,
     });
 
     const legionaries = await Unit.create({

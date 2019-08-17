@@ -11,11 +11,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
 // 'API' routes
-app.use('api/users', require('./api/users'));
-app.use('api/armies', require('./api/armies'));
-app.use('api/forces', require('./api/forces'));
-app.use('api/units', require('./api/units'));
-app.use('api/divisions', require('./api/divisions'));
+app.use('/api/users', require('./api/users'));
+app.use('/api/armies', require('./api/armies'));
+app.use('/api/forces', require('./api/forces'));
+app.use('/api/units', require('./api/units'));
+app.use('/api/divisions', require('./api/divisions'));
 
 app.use('*', (req, res, next) => {
   res.sendFile(path.join(__dirname, '..', 'public/index.html'));

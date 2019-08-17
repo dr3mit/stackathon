@@ -158,7 +158,7 @@ const Army = db.define('army', {
     type: Sequelize.ENUM(
       Object.values(data.timePeriod).map(period => period.time)
     ),
-    defaultValue: data.timePeriod['Pax Romana'].time,
+    defaultValue: data.timePeriod['PaxRomana'].time,
   },
 });
 
