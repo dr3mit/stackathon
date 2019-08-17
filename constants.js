@@ -35,6 +35,7 @@ const constants = {
     SLING: 'SLING',
     JAVELIN: 'JAVELIN',
   },
+  GUEST: 'GUEST',
 };
 
 module.exports = constants;

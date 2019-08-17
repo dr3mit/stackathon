@@ -13,12 +13,12 @@ const types = {
   cavalry: 'Cavalry',
   chariots: 'Chariots',
 };
-const specialRules = [
-  {
-    testudo: '+2 save from shooting attacks.',
-    elite: 'Re-roll 1 to hit roll.',
-  },
-];
-const timePeriod = [{ name: 'Pax Romana', time: '20 BC - 200 AD' }];
+// const specialRules = [
+//   {
+//     testudo: '+2 save from shooting attacks.',
+//     elite: 'Re-roll 1 to hit roll.',
+//   },
+// ];
+const timePeriod = { 'Pax Romana': { time: '20 BC - 200 AD' } };
 
-module.exports = { factions, types, specialRules, timePeriod, constants };
+module.exports = { factions, types, timePeriod, constants };
