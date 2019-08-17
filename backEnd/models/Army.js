@@ -2,8 +2,6 @@ const db = require('../db');
 const Sequelize = require('sequelize');
 const data = require('../../data');
 
-const factionArr = Object.values(data.factions).map(faction => faction.name);
-
 const Army = db.define('army', {
   id: {
     type: Sequelize.UUID,
@@ -15,7 +13,9 @@ const Army = db.define('army', {
     defaultValue: `FORCE`,
   },
   faction: {
-    type: Sequelize.ENUM(factionArr),
+    type: Sequelize.ENUM(
+      Object.values(data.factions).map(faction => faction.name)
+    ),
     allowNull: false,
   },
   minUnitsPerDivision: {

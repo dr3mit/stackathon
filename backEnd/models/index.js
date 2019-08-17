@@ -13,6 +13,7 @@ Unit.belongsTo(Army);
 
 Force.hasMany(Division);
 Division.belongsTo(Force);
+
 Division.hasMany(Unit);
 Unit.belongsTo(Division);
 
@@ -24,4 +25,14 @@ Upgrade.belongsTo(Unit);
 User.hasMany(Force);
 Force.belongsTo(User);
 
-module.exports = { db, Army, Unit, Division, Force, User, data };
+module.exports = {
+  db,
+  Army,
+  Unit,
+  Division,
+  Force,
+  User,
+  SpecialRule,
+  Upgrade,
+  data,
+};
